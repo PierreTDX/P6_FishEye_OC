@@ -37,14 +37,14 @@
     margin: 0 100px;
 }
 
-.photograph_header .photograph_details h2 {
+.photograph_header .photograph_details h1 {
     font-size: 64px;
     font-weight: normal;
     color: #D3573C;
     margin: 0;
 }
 
-.photograph_header .photograph_details h3 {
+.photograph_header .photograph_details h2 {
     font-size: 24px;
     font-weight: normal;
     color: #901C1C;
@@ -58,3 +58,73 @@
     color: #525252;
     margin: 0;
 }
+
+.photograph_portFolio .filter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.photograph_portFolio .filet h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/****galerie CARD****/
+.content_gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 50px;
+}
+
+.gallery_card {
+width: 30%;
+}
+
+.gallery_card a figure {
+    height: 300px;
+}
+
+.gallery_thumbnail{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.gallery_card figcaption{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.gallery_card figcaption h2{
+    font-weight: 100;
+    color: #901C1C;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.gallery_card figcaption div{ 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #901C1C;
+    font-size: 24px;
+}
+
+.btn_like{
+    border-radius: 5px;
+    padding: 0 1px;
+    font-size: 24px;
+    color: #D3573C;
+}
+
+button{
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+

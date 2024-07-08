@@ -33,11 +33,20 @@ h1 {
     margin-left: 100px;
 }
 
+img,
+video {
+    object-fit: cover;
+}
+
+figure {
+    margin: 0;
+}
+
 .photographer_section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
-    margin-top: 100px;
+    margin-top: 45px;
 }
 
 .photographer_section article .photographer_header,

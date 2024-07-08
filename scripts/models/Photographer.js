@@ -8,4 +8,4 @@ export default class Photographer {
         this.price = data.price;
         this.portrait = data.portrait;
     }
-}
+};

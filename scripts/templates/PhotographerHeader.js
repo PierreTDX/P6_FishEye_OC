@@ -6,8 +6,8 @@ export default class PhotographerHeader {
     createPhotographerHeader() {
         const profilePageHeader = document.querySelector(".photograph_details");
         const details = `
-                <h2>${this.photographer.name}</h2>
-                <h3>${this.photographer.city}, ${this.photographer.country}</h3>
+                <h1>${this.photographer.name}</h1>
+                <h2>${this.photographer.city}, ${this.photographer.country}</h2>
                 <q>${this.photographer.tagline}</q>    
         `;
         const profilePagePicture = document.querySelector(".photograph_picture");

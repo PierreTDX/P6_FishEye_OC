@@ -1,7 +1,7 @@
 export default class PhotographerCard {
     constructor(photographer){
         this.photographer = photographer;
-    }
+    };
 
     createPhotographerCard() {
         const article = document.createElement( 'article' );
@@ -18,7 +18,7 @@ export default class PhotographerCard {
                 <p>${this.photographer.price}€/jour</p>
             </div>
         `;
-        article.innerHTML = photographerCard;
-        return article;
-    }
-}
+        article.innerHTML = photographerCard ;
+        return article ;
+    };
+};
