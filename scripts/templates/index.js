@@ -9,7 +9,7 @@ export default class PhotographerCard {
             <a href="photographer.html?id=${this.photographer.id}" role="link" aria-label="Voir le profil de ${this.photographer.name}">
                 <div class="photographer_header">
                     <img src="./assets/images/photographers/${this.photographer.portrait}" alt="${this.photographer.name}">
-                    <h2 ">${this.photographer.name}</h2>
+                    <h2>${this.photographer.name}</h2>
                 </div>
             </a>
             <div class="photographer_details">

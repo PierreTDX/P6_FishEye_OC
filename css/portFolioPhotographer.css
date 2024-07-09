@@ -124,7 +124,7 @@ width: 30%;
 button{
     background-color: transparent;
     cursor: pointer;
-    outline: none;
+    /* outline: none; */
     border: none;
 }
 

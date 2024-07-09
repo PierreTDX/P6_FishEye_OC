@@ -1,0 +1,15 @@
+.aside_content {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    height: 50px;
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 24px;
+    background-color: #DB8876;
+    position: fixed;
+    bottom: 0;
+    right: 10%;
+}
