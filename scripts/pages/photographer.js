@@ -2,6 +2,7 @@ import Api from "../api/Api.js";
 import PhotographerHeader from "../templates/PhotographerHeader.js";
 import PhotographerGallery from "../templates/PhotographerGallery.js";
 import PhotographerLikesAndPrice from "../templates/PhotographerLikesAndPrice.js";
+import NameForm from "../templates/NameForm.js";
 import MediasFactory from "../factory/MediasFactory.js";
 import Photographer from "../models/Photographer.js";
 
@@ -27,6 +28,8 @@ const displayProfilePage = async () => {
     galleryTemplate.createPhotographerGallery();
     const LikesAndPriceTemplate = new PhotographerLikesAndPrice(photographer, medias);
     LikesAndPriceTemplate.createPhotographerThumbnailLikesAndPrice();
+    const nameFormTemplate = new NameForm(photographer);
+    nameFormTemplate.nameForm();
 };
 
 displayProfilePage();
