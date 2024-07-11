@@ -1,3 +1,5 @@
+@import url("errorForm.css");
+
 .photograph_header {
     display: flex;
     justify-content: space-between;

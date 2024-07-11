@@ -37,21 +37,41 @@
       <div class="modal">
         <header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img src="assets/icons/close.svg" onclick="closeModal()" aria-label="fermer le formulaire"
+            alt="croix pour fermer le formulaire" />
         </header>
-        <h3 class="form_name">Nom du photographe</h3>
+        <h3 class="form_name" aria-label="nom du photographe">Nom du photographe</h3>
         <form id="contactForm">
-          <div>
-            <label for="first">Prénom</label>
-            <input id="first" name="first"/>
-            <label for="last">Nom</label>
-            <input id="last" name="last"/>
+          <div class="form_content">
+            <div class="formData" data-error="Veuillez entrer 2 caractères ou plus sans chiffres"
+              data-error-visible="false">
+              <label for="first">Prénom</label>
+              <input class="text-control" id="first" name="first" aria-labelledby="Champ prénom" type="text"
+                minlength="2" maxlength="30" data-error="Minimum 2 caractères, et pas de chiffres"
+                required />
+            </div>
+            <div class="formData" data-error="Veuillez entrer 2 caractères ou plus sans chiffres"
+              data-error-visible="false">
+              <label for="last">Nom</label>
+              <input class="text-control" id="last" name="last" aria-labelledby="Champ nom" type="text" minlength="2" maxlength="30"
+                data-error="Minimum 2 caractères, et pas de chiffres" required />
+            </div>
+            <div class="formData" data-error="Veuillez entrer un mail valide"
+              data-error-visible="false">
             <label for="email">Email</label>
-            <input id="email" name="email"/>
+            <input class="text-control" id="email" name="email" aria-labelledby="Champ email" type="email" data-error="saisir un mail valide"
+              required />
+            </div>
+            <div class="formData" data-error="Texte entre 2 et 300 caractères"
+              data-error-visible="false">
             <label for="message">Votre message</label>
-            <textarea id="message" name="message" rows="3" cols="40"></textarea>
+            <textarea class="text-control" id="message" name="message" rows="3" cols="40" aria-labelledby="Champ de texte" type="text"
+              minlength="2" maxlength="300" data-error="Minimum 2 caractères, maximum 300 caractères"
+              required></textarea>
+            </div>
+
           </div>
-          <button class="contact_button" type="button" onclick="submitForm()">Envoyer</button>
+          <button class="contact_button" type="button" onclick="submitForm()" aria-label="envoyer">Envoyer</button>
         </form>
       </div>
     </div>
