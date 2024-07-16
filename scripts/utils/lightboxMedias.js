@@ -74,23 +74,18 @@ export function displayLightBoxMedias() {
             }
         });
     }
+    
     handlerLightBoxMediasByKeybord();
 
     const btnClose = document.querySelector('.btn_close_lightbox');
-    btnClose.addEventListener('click', function() {
-        closeLightBoxMedias();
-    });
+    btnClose.addEventListener('click', () => closeLightBoxMedias());
 
     const btnPrev = document.querySelector('.btn_previous');
     const btnNext = document.querySelector('.btn_next');
 
-    btnPrev.addEventListener('click', function() {
-        showPrevMedia();
-    });
+    btnPrev.addEventListener('click', () => showPrevMedia());
 
-    btnNext.addEventListener('click', function() {
-        showNextMedia();
-    });
+    btnNext.addEventListener('click', () => showNextMedia());
 
     function showPrevMedia() {
         if (currentIndex > 0) {
