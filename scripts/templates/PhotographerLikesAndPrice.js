@@ -1,3 +1,5 @@
+import { totalLikes } from "../utils/likes.js";
+
 export default class PhotographerLikesAndPrice {
     constructor(photographer, medias) {
         this.photographer = photographer;
@@ -18,6 +20,10 @@ export default class PhotographerLikesAndPrice {
             `;
 
         contentLikesAndPrice.innerHTML = LikesAndPriceCard;
+
+        totalLikes();
+
         return contentLikesAndPrice;
     };
+
 };

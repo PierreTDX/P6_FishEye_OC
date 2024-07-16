@@ -1,4 +1,5 @@
 import { displayLightBoxMedias } from "../utils/lightboxMedias.js"
+import { addLike } from "../utils/likes.js";
 
 export default class PhotographerMedias {
     constructor(photographer, medias) {
@@ -37,9 +38,8 @@ export default class PhotographerMedias {
             
         });
 
+        addLike();
         displayLightBoxMedias();
-
     };
 
 };
-
