@@ -30,6 +30,8 @@ const displayProfilePage = async () => {
     LikesAndPriceTemplate.createPhotographerThumbnailLikesAndPrice();
     const nameFormTemplate = new NameForm(photographer);
     nameFormTemplate.nameForm();
+
+
 };
 
 displayProfilePage();

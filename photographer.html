@@ -32,8 +32,8 @@
         <div class="likes_price_thumbnail"></div>
       </section>
     </main>
-
-    <div id="contact_modal">
+<!-- formulaire de contact -->
+    <section id="contact_modal" role="formulaire de contact">
       <div class="modal">
         <header>
           <h2>Contactez-moi</h2>
@@ -69,15 +69,28 @@
               minlength="2" maxlength="300" data-error="Minimum 2 caractères, maximum 300 caractères"
               required></textarea>
             </div>
-
           </div>
           <button class="contact_button" type="button" onclick="submitForm()" aria-label="envoyer">Envoyer</button>
         </form>
       </div>
-    </div>
+    </section>
+    <!-- Lightbox -->
+    <section class="modal_lightbox" role="fenêtre vues photos">
+      <div class="lightbox" aria-label="vues des photos">
+        <button class="btn_previous" aria-label="bouton média précédent"><i class="fa-solid fa-chevron-left"></i></button>
+        <figure class="lightbox_media" aria-label="vue média encours" role="media">
+          <img src="./assets/images/SamplePhotos/Marcel Nikolic/Travel_SunsetonCanals.jpg" alt="photo">
+          <figcaption class="legend">Titre de la photo</figcaption>
+        </figure>
+        <button class="btn_next" aria-label="bouton média suivant"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="btn_close_lightbox" aria-label="bouton fermeture visionneuse"><i class="fa-solid fa-xmark"></i></button>
+
+      </div>
+    </section>
   </div>
   <script src="./scripts/pages/photographer.js" type="module"></script>
   <script src="./scripts/utils/contactForm.js"></script>
+
 </body>
 
 </html>

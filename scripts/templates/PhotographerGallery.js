@@ -1,3 +1,5 @@
+import { displayLightBoxMedias } from "../utils/lightboxMedias.js"
+
 export default class PhotographerMedias {
     constructor(photographer, medias) {
         this.photographer = photographer;
@@ -17,9 +19,9 @@ export default class PhotographerMedias {
 
             const galleryCard = `
             <article class="gallery_card">                           
-                <a href="#" data-id=${media.id} role="link" aria-label="Vue image">
+                <div class="thumbnail" data-id=${media.id} role="link" aria-label="Vue image">
                    <figure>${mediaContent}</figure>
-                </a>
+                </div>
                 <figcaption>
                     <h2>${media.title}</h2>
                     <div role="group" aria-label="bouton like et nombre de likes">
@@ -32,10 +34,12 @@ export default class PhotographerMedias {
             </article>
             `;
             contentGallery.innerHTML += galleryCard;
+            
         });
 
-        // contentGallery.innerHTML = galleryCard;
-        // return contentGallery;
+        displayLightBoxMedias();
+
     };
+
 };
 
