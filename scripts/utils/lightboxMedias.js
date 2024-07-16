@@ -63,7 +63,7 @@ export function displayLightBoxMedias() {
         modal.style.display = "none";
     }
 
-    function closeLightBoxMediasByEchap() {
+    function handlerLightBoxMediasByKeybord() {
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {  // Vérifie si la touche Échap est pressée
                 closeLightBoxMedias();  // Ferme la visionneuse
@@ -74,7 +74,7 @@ export function displayLightBoxMedias() {
             }
         });
     }
-    closeLightBoxMediasByEchap();
+    handlerLightBoxMediasByKeybord();
 
     const btnClose = document.querySelector('.btn_close_lightbox');
     btnClose.addEventListener('click', function() {
