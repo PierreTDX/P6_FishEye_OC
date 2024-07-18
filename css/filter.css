@@ -1,0 +1,100 @@
+/****Filtre****/
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.filter .filter_title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Container pour le select personnalisé */
+.custom-select-container {
+    position: relative;
+    width: 170px; /* Ajustez selon vos besoins */
+    z-index: 90;
+}
+
+/* Style du select */
+.custom-select {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #901C1C;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+/* Style pour l'élément sélectionné */
+.select-selected {
+    padding: 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* Style pour la flèche */
+.select-selected::after {
+    content: '\f078'; /* Code Unicode pour l'icône de chevron vers le bas */
+    font-family: 'Font Awesome 5 Free'; /* Nom de la police de caractères de Font Awesome */
+    transition: transform 0.3s ease;
+}
+
+
+/* Style pour la flèche tournante */
+.select-arrow-active::after {
+    transform: rotate(-180deg);
+}
+
+/* Style pour la liste déroulante */
+.select-items {
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Cacher la liste par défaut */
+.select-hide {
+    display: none;
+}
+
+/* Style pour chaque option dans la liste */
+.select-item {
+    position: relative; /* Nécessaire pour positionner le pseudo-élément par rapport à l'élément parent */
+    padding: 20px;
+    cursor: pointer;
+    background-color: #901C1C;
+}
+
+.select-item:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.select-item::after {
+    content: '';
+    position: absolute;
+    top: 0; /* Positionner la bordure en haut de l'élément */
+    left: 10%; /* Décalage de 10% à partir de la gauche */
+    width: 80%; /* Largeur de 80% */
+    border-top: solid 1px #ffffff;
+}
+
+.select-item:hover,
+.select-selected:hover {
+    background-color: #DB8876;
+}
+
+/* pour retirer le border-radius en bas quand le menu est ouvert */
+.custom-select.menu-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}

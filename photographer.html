@@ -24,15 +24,25 @@
         <div class="photograph_picture" id="photograph_picture"></div>
       </section>
       <section class="photograph_portFolio">
+        <!-- filtre de trie -->
         <div class="filter">
-          <h3 class="filter-title">Tier par</h3>
-          <nav>menu déroulant</nav>
+          <h3 class="filter_title">Trier par</h3>
+          <nav class="custom-select-container" role="menu de trie">
+            <div class="custom-select" id="customSelect">
+              <div class="select-selected" data-value="1" aria-label="Popularité">Popularité</div>
+              <div class="select-items select-hide">
+                <div class="select-item" data-value="2" aria-label="Date">Date</div>
+                <div class="select-item" data-value="3" aria-label="Titre">Titre</div>
+              </div>
+            </div>
+          </nav>
         </div>
+
         <div class="content_gallery"></div>
         <div class="likes_price_thumbnail"></div>
       </section>
     </main>
-<!-- formulaire de contact -->
+    <!-- formulaire de contact -->
     <section id="contact_modal" role="formulaire de contact">
       <div class="modal">
         <header>
@@ -47,49 +57,50 @@
               data-error-visible="false">
               <label for="first">Prénom</label>
               <input class="text-control" id="first" name="first" aria-labelledby="Champ prénom" type="text"
-                minlength="2" maxlength="30" data-error="Minimum 2 caractères, et pas de chiffres"
-                required />
+                minlength="2" maxlength="30" data-error="Minimum 2 caractères, et pas de chiffres" required />
             </div>
             <div class="formData" data-error="Veuillez entrer 2 caractères ou plus sans chiffres"
               data-error-visible="false">
               <label for="last">Nom</label>
-              <input class="text-control" id="last" name="last" aria-labelledby="Champ nom" type="text" minlength="2" maxlength="30"
-                data-error="Minimum 2 caractères, et pas de chiffres" required />
+              <input class="text-control" id="last" name="last" aria-labelledby="Champ nom" type="text" minlength="2"
+                maxlength="30" data-error="Minimum 2 caractères, et pas de chiffres" required />
             </div>
-            <div class="formData" data-error="Veuillez entrer un mail valide"
-              data-error-visible="false">
-            <label for="email">Email</label>
-            <input class="text-control" id="email" name="email" aria-labelledby="Champ email" type="email" data-error="saisir un mail valide"
-              required />
+            <div class="formData" data-error="Veuillez entrer un mail valide" data-error-visible="false">
+              <label for="email">Email</label>
+              <input class="text-control" id="email" name="email" aria-labelledby="Champ email" type="email"
+                data-error="saisir un mail valide" required />
             </div>
-            <div class="formData" data-error="Texte entre 2 et 300 caractères"
-              data-error-visible="false">
-            <label for="message">Votre message</label>
-            <textarea class="text-control" id="message" name="message" rows="3" cols="40" aria-labelledby="Champ de texte" type="text"
-              minlength="2" maxlength="300" data-error="Minimum 2 caractères, maximum 300 caractères"
-              required></textarea>
+            <div class="formData" data-error="Texte entre 2 et 300 caractères" data-error-visible="false">
+              <label for="message">Votre message</label>
+              <textarea class="text-control" id="message" name="message" rows="3" cols="40"
+                aria-labelledby="Champ de texte" type="text" minlength="2" maxlength="300"
+                data-error="Minimum 2 caractères, maximum 300 caractères" required></textarea>
             </div>
           </div>
-          <button class="contact_button" type="button" onclick="submitForm()" aria-label="envoyer">Envoyer</button>
+          <button class="contact_button send_button" type="button" onclick="submitForm()"
+            aria-label="envoyer">Envoyer</button>
         </form>
       </div>
     </section>
     <!-- Lightbox -->
     <section class="modal_lightbox" role="fenêtre vues photos">
       <div class="lightbox" aria-label="vues des photos">
-        <button class="btn_previous" aria-label="bouton média précédent"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="btn_previous" aria-label="bouton média précédent"><i
+            class="fa-solid fa-chevron-left"></i></button>
         <figure class="lightbox_media" aria-label="vue média encours" role="media">
           <img src="./assets/images/SamplePhotos/Marcel Nikolic/Travel_SunsetonCanals.jpg" alt="photo">
           <figcaption class="legend">Titre de la photo</figcaption>
         </figure>
         <button class="btn_next" aria-label="bouton média suivant"><i class="fa-solid fa-chevron-right"></i></button>
-        <button class="btn_close_lightbox" aria-label="bouton fermeture visionneuse"><i class="fa-solid fa-xmark"></i></button>
+        <button class="btn_close_lightbox" aria-label="bouton fermeture visionneuse"><i
+            class="fa-solid fa-xmark"></i></button>
 
       </div>
     </section>
   </div>
   <script src="./scripts/pages/photographer.js" type="module"></script>
   <script src="./scripts/utils/contactForm.js"></script>
+  <script src="./scripts/templates/filter.js"></script>
 
 </body>
 
