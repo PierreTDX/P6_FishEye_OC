@@ -1,20 +1,12 @@
-function sortMedia(mediaArray, criteria) {
-    return mediaArray.sort(function(a, b) {
-        if (criteria === 'date') {
-            return new Date(a.date) - new Date(b.date);
-        } else if (criteria === 'likes') {
-            return a.likes - b.likes;
-        } else if (criteria === 'title') {
-            return a.title.localeCompare(b.title);
-        }
-    });
-}
-// Exemples :
-console.log('Trier par date:');
-console.log(sortMedia('date'));
-
-// console.log('Trier par likes:');
-// console.log(sortMedia('likes'));
-
-// console.log('Trier par title:');
-// console.log(sortMedia('title'));
+export function sortMedias(medias, sortType) {
+    switch (sortType) {
+        case 'likes':
+            return medias.sort((a, b) => b.likes - a.likes);
+        case 'date':
+            return medias.sort((a, b) => new Date(b.date) - new Date(a.date));
+        case 'title':
+            return medias.sort((a, b) => a.title.localeCompare(b.title));
+        default:
+            return medias.sort((a, b) => b.likes - a.likes); // Tri par défaut : likes
+    }
+};

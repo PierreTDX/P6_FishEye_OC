@@ -3,6 +3,7 @@ import PhotographerHeader from "../templates/PhotographerHeader.js";
 import PhotographerGallery from "../templates/PhotographerGallery.js";
 import PhotographerLikesAndPrice from "../templates/PhotographerLikesAndPrice.js";
 import NameForm from "../templates/NameForm.js";
+import { filter } from "../templates/filter.js";
 import MediasFactory from "../factory/MediasFactory.js";
 import Photographer from "../models/Photographer.js";
 
@@ -21,6 +22,7 @@ export const getPhotographerById = async () => {
 };
 
 const displayProfilePage = async () => {
+    filter();
     const { photographer, medias } = await getPhotographerById();
     const headerTemplate = new PhotographerHeader(photographer);
     headerTemplate.createPhotographerHeader();
@@ -30,7 +32,6 @@ const displayProfilePage = async () => {
     LikesAndPriceTemplate.createPhotographerThumbnailLikesAndPrice();
     const nameFormTemplate = new NameForm(photographer);
     nameFormTemplate.nameForm();
-
 
 };
 

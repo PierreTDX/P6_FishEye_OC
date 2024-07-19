@@ -1,5 +1,6 @@
 import { displayLightBoxMedias } from "../utils/lightboxMedias.js"
 import { addLike } from "../utils/likes.js";
+import { sortMedias } from "../utils/filter.js";
 
 export default class PhotographerMedias {
     constructor(photographer, medias) {
@@ -7,15 +8,10 @@ export default class PhotographerMedias {
         this.medias = medias;
     };
 
-        // Fonction pour trier les médias par nombre de likes du plus grand au plus petit
-        sortMediasByLikesDescending() {
-            this.medias.sort((a, b) => b.likes - a.likes);
-        }
-
     createPhotographerGallery() {
-         // Trier les médias avant de créer la galerie
-         this.sortMediasByLikesDescending();
-         
+        // Trier les médias par défaut avant de créer la galerie
+        sortMedias(this.medias, 'like');
+
         const contentGallery = document.querySelector(".content_gallery");
 
         this.medias.forEach(media => {
