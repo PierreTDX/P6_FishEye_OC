@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const customSelectContainer = customSelect.closest('.custom-select');
 
     const options = [
-        { value: 1, text: 'Popularité' },
-        { value: 2, text: 'Date' },
-        { value: 3, text: 'Titre' }
+        { value: 1, text: 'Popularité', ariaLabel: 'Popularité' },
+        { value: 2, text: 'Date', ariaLabel: 'Date' },
+        { value: 3, text: 'Titre', ariaLabel: 'Titre' }
     ];
 
     function updateOptions(excludeValue) {
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.classList.add('select-item');
                 item.dataset.value = option.value;
                 item.textContent = option.text;
+                item.setAttribute('aria-label', option.ariaLabel);
                 item.addEventListener('click', () => {
                     selected.textContent = option.text;
                     selected.dataset.value = option.value;

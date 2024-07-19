@@ -16,8 +16,6 @@
     z-index: 100;
     display: flex;
     margin: auto;
-
-    /* position: relative; */
 }
 
 .lightbox_media {
@@ -42,11 +40,9 @@
     font-size: 64px;
     padding: 20px;
     color: #901C1C;
-    /* position: absolute; */
 }
 
 .btn_close_lightbox{
-    /* z-index: 100; */
     position: absolute;
     top: 0px;
     right: 0px;
