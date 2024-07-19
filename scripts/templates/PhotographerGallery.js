@@ -7,7 +7,15 @@ export default class PhotographerMedias {
         this.medias = medias;
     };
 
+        // Fonction pour trier les médias par nombre de likes du plus grand au plus petit
+        sortMediasByLikesDescending() {
+            this.medias.sort((a, b) => b.likes - a.likes);
+        }
+
     createPhotographerGallery() {
+         // Trier les médias avant de créer la galerie
+         this.sortMediasByLikesDescending();
+         
         const contentGallery = document.querySelector(".content_gallery");
 
         this.medias.forEach(media => {
