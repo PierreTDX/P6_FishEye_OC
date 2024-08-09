@@ -6,13 +6,44 @@ export default class PhotographerMedias {
     constructor(photographer, medias) {
         this.photographer = photographer;
         this.medias = medias;
+        this.init();
     };
 
-    createPhotographerGallery() {
-        // Trier les médias par défaut avant de créer la galerie
-        sortMedias(this.medias, 'like');
+    init() {
+        // Écoute l'événement de changement sur le menu déroulant
+        document.querySelector('.custom-select').addEventListener('click', () => {
+            this.updateGallery();
+        });
+
+        // Initialisation de la galerie avec le tri par défaut
+        this.updateGallery();
+    }
+
+    updateGallery() {
+        // Récupère l'élément sélectionné dans le menu déroulant
+        const selectedOption = document.querySelector('.select-selected').dataset.value;
+
+        // Détermine le type de tri en fonction de la sélection de l'utilisateur
+        let sortType;
+        switch (selectedOption) {
+            case '1':
+                sortType = 'likes'; // Popularité
+                break;
+            case '2':
+                sortType = 'date'; // Date
+                break;
+            case '3':
+                sortType = 'title'; // Titre
+                break;
+            default:
+                sortType = 'likes'; // Par défaut, tri par likes
+        }
+
+        // Trie les médias selon le type sélectionné
+        sortMedias(this.medias, sortType);
 
         const contentGallery = document.querySelector(".content_gallery");
+        contentGallery.innerHTML = ``;
 
         this.medias.forEach(media => {
 

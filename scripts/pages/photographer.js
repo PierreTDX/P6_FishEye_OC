@@ -27,7 +27,7 @@ const displayProfilePage = async () => {
     const headerTemplate = new PhotographerHeader(photographer);
     headerTemplate.createPhotographerHeader();
     const galleryTemplate = new PhotographerGallery(photographer, medias);
-    galleryTemplate.createPhotographerGallery();
+    galleryTemplate.updateGallery();
     const LikesAndPriceTemplate = new PhotographerLikesAndPrice(photographer, medias);
     LikesAndPriceTemplate.createPhotographerThumbnailLikesAndPrice();
     const nameFormTemplate = new NameForm(photographer);
