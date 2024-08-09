@@ -48,8 +48,8 @@ export default class PhotographerMedias {
         this.medias.forEach(media => {
 
             const mediaContent = media.image
-            ? ` <img class="gallery_thumbnail" src="./assets/images/SamplePhotos/${this.photographer.name}/${media.image}" alt="${media.title}" title="${media.title}">`
-            : ` <video class="gallery_thumbnail" aria-label="${media.title}" title="${media.title}">
+            ? ` <img class="gallery_thumbnail" src="./assets/images/SamplePhotos/${this.photographer.name}/${media.image}" alt="${media.title}" title="${media.title}" tabindex="0">`
+            : ` <video class="gallery_thumbnail" aria-label="${media.title}" title="${media.title}" tabindex="0">
                     <source src="./assets/images/SamplePhotos/${this.photographer.name}/${media.video}" type="video/mp4">
                 </video>`;
 

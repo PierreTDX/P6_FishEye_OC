@@ -4,17 +4,42 @@ export function displayLightBoxMedias() {
 
     console.log("tous les médias", allMedia);
 
+    // for (let i = 0; i < allMedia.length; i++) {
+    //     const media = allMedia[i];
+    //     media.addEventListener("click", function(e) {
+    //         currentIndex = i;
+    //         console.log("le media cliqué :", e.target.src);
+    //         openLightBoxMedias();
+    //         document.querySelector('.btn_close_lightbox').focus();
+    //         lightboxTemplate(e.target);
+    //     });
+    //     console.log("valeur de média :", media);
+    // }
     for (let i = 0; i < allMedia.length; i++) {
         const media = allMedia[i];
+
+        // Ajout de l'événement 'click'
         media.addEventListener("click", function(e) {
             currentIndex = i;
-            console.log("le media cliqué :", e.target.src);
-            openLightBoxMedias();
-            document.querySelector('.btn_close_lightbox').focus();
-            lightboxTemplate(e.target);
+            console.log("CLIQUE = OUVRIR LA VISIONNEUSE", i);
+            openLightBoxAndDisplayMedia(e.target);
         });
-        console.log("valeur de média :", media);
+
+        // Ajout de l'événement 'keydown' pour écouter la touche 'Enter'
+        media.addEventListener("keydown", function(e) {
+            if (e.key === 'Enter') {
+                currentIndex = i;
+                console.log("ENTER = OUVRIR LA VISIONNEUSE", i);
+                openLightBoxAndDisplayMedia(e.target);
+            }
+        });
     }
+
+    function openLightBoxAndDisplayMedia(target) {
+        openLightBoxMedias();
+        lightboxTemplate(target);
+    }                   
+
 
     function lightboxTemplate(target) {
         console.log("dans lightboxTemplate");
@@ -54,6 +79,7 @@ export function displayLightBoxMedias() {
     }
     
     function openLightBoxMedias() {
+        document.querySelector('.btn_close_lightbox').focus();
         const modal = document.querySelector(".modal_lightbox");
         modal.style.display = "flex";
     }
