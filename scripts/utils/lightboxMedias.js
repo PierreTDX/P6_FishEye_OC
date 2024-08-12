@@ -3,18 +3,7 @@ export function displayLightBoxMedias() {
     let currentIndex = -1;
 
     console.log("tous les médias", allMedia);
-
-    // for (let i = 0; i < allMedia.length; i++) {
-    //     const media = allMedia[i];
-    //     media.addEventListener("click", function(e) {
-    //         currentIndex = i;
-    //         console.log("le media cliqué :", e.target.src);
-    //         openLightBoxMedias();
-    //         document.querySelector('.btn_close_lightbox').focus();
-    //         lightboxTemplate(e.target);
-    //     });
-    //     console.log("valeur de média :", media);
-    // }
+    
     for (let i = 0; i < allMedia.length; i++) {
         const media = allMedia[i];
 

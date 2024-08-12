@@ -29,7 +29,8 @@
     cursor: pointer;
 }
 
-.contact_button:hover {
+.contact_button:hover,
+.contact_button:focus {
     background-color: #DB8876;
 }
 
@@ -126,7 +127,8 @@ button{
     border: none;
 }
 
-.send_button:hover {
+.send_button:hover,
+.send_button:focus {
     background-color: #D3573C;
 }
 
