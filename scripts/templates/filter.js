@@ -91,7 +91,7 @@ export function filter() {
         });
 
         // Gestion des événements clavier pour les options du menu
-        function handleItemKeydown(event, index) {
+        function handleItemKeydown(event) {
             switch (event.key) {
                 case 'ArrowDown':
                     focusNextItem();
