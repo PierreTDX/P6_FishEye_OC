@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function displayModal() {
     const modal = document.getElementById("contact_modal");
     modal.style.display = "block";
@@ -20,6 +21,7 @@ function closeModalByEchap() {
 closeModalByEchap()
 
 // Fonction pour tester puis envoyer le formulaire
+/* eslint-disable no-unused-vars */
 function submitForm() {
 
   // Vérification de chaque champ du formulaire en une seule ligne
