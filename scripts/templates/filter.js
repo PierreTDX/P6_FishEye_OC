@@ -73,18 +73,22 @@ export function filter() {
         selected.addEventListener('keydown', (event) => {
             switch (event.key) {
                 case 'ArrowDown':
+                    event.preventDefault(); // Empêche le défilement de la page
                     openDropdown();
                     focusNextItem();
                     break;
                 case 'ArrowUp':
+                    event.preventDefault(); // Empêche le défilement de la page
                     openDropdown();
                     focusPreviousItem();
                     break;
                 case 'Enter':
                 case ' ':
+                    event.preventDefault(); // Empêche le défilement de la page
                     openDropdown();
                     break;
                 case 'Escape':
+                    event.preventDefault(); // Empêche le défilement de la page
                     closeDropdown();
                     break;
             }
@@ -94,9 +98,11 @@ export function filter() {
         function handleItemKeydown(event) {
             switch (event.key) {
                 case 'ArrowDown':
+                    event.preventDefault(); // Empêche le défilement de la page
                     focusNextItem();
                     break;
                 case 'ArrowUp':
+                    event.preventDefault(); // Empêche le défilement de la page
                     focusPreviousItem();
                     break;
                 case 'Enter':
@@ -105,6 +111,7 @@ export function filter() {
                     itemsContainer.children[focusedIndex].click(); // Sélectionne l'élément
                     break;
                 case 'Escape':
+                    event.preventDefault(); // Empêche le défilement de la page
                     closeDropdown();
                     break;
             }
