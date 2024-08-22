@@ -1,5 +1,3 @@
-// Ajouter les écouteurs d'événements pour les cliques du formulaire et bouton contactez-moi
-document.addEventListener('DOMContentLoaded', function () {
   // Bouton pour ouvrir la modale de contact
   const contactButton = document.querySelector('.contact_button');
   contactButton.addEventListener('click', displayModal);
@@ -11,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Bouton pour soumettre le formulaire
   const submitButton = document.querySelector('.send_button');
   submitButton.addEventListener('click', submitForm);
-});
 
 function displayModal() {
     const modal = document.getElementById("contact_modal");
