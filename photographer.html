@@ -20,7 +20,7 @@
     <main id="main">
       <section class="photograph_header">
         <div class="photograph_details" id="photograph_details"></div>
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <button class="contact_button">Contactez-moi</button>
         <div class="photograph_picture" id="photograph_picture"></div>
       </section>
       <section class="photograph_portFolio">
@@ -47,7 +47,7 @@
       <div class="modal">
         <header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" aria-label="fermer le formulaire"
+          <img src="assets/icons/close.svg" aria-label="fermer le formulaire"
             alt="croix pour fermer le formulaire" />
         </header>
         <h3 class="form_name" aria-label="nom du photographe">Nom du photographe</h3>
@@ -77,7 +77,7 @@
                 data-error="Minimum 2 caractères, maximum 300 caractères" required></textarea>
             </div>
           </div>
-          <button class="contact_button send_button" type="button" onclick="submitForm()"
+          <button class="contact_button send_button" type="button"
             aria-label="envoyer">Envoyer</button>
         </form>
       </div>

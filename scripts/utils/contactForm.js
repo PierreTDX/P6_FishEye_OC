@@ -1,4 +1,18 @@
-/* eslint-disable no-unused-vars */
+// Ajouter les écouteurs d'événements pour les cliques du formulaire et bouton contactez-moi
+document.addEventListener('DOMContentLoaded', function () {
+  // Bouton pour ouvrir la modale de contact
+  const contactButton = document.querySelector('.contact_button');
+  contactButton.addEventListener('click', displayModal);
+
+  // Bouton pour fermer la modale de contact
+  const closeButton = document.querySelector('img[aria-label="fermer le formulaire"]');
+  closeButton.addEventListener('click', closeModal);
+
+  // Bouton pour soumettre le formulaire
+  const submitButton = document.querySelector('.send_button');
+  submitButton.addEventListener('click', submitForm);
+});
+
 function displayModal() {
     const modal = document.getElementById("contact_modal");
     modal.style.display = "block";
@@ -21,7 +35,6 @@ function closeModalByEchap() {
 closeModalByEchap()
 
 // Fonction pour tester puis envoyer le formulaire
-/* eslint-disable no-unused-vars */
 function submitForm() {
 
   // Vérification de chaque champ du formulaire en une seule ligne
